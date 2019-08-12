@@ -13,11 +13,15 @@ export class AppComponent {
 
   constructor(){
     console.log('[TEST]Constructor into log');
+    this.getUserStatus();
   }
   displayAuthor(){
     return this.author;
   }
   getUserStatus(){
     this.status = true;
+  }
+  buttonClicked(){
+    alert('Welcome' + name);
   }
 }
