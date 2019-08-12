@@ -7,6 +7,6 @@ import { Component } from '@angular/core';
 export class ExampleComponent {
     title = 'Something something';
     constructor(){
-        console.log('Welp...');
+        console.log('Nothing to see here');
       }
 }
