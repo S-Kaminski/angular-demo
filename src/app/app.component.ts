@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-demo';
+
+  constructor(){
+    console.log('[TEST]Constructor into log');
+  }
 }
