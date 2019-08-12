@@ -24,4 +24,7 @@ export class AppComponent {
   buttonClicked(){
     alert('Welcome' + name);
   }
+  mouseOverBox(){
+    console.log('Mouse is over the black box!');
+  }
 }
