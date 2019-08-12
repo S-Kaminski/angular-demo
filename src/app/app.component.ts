@@ -9,11 +9,15 @@ export class AppComponent {
   title = 'angular-demo';
   name = 'fellow GitHub code-peeker';
   author = 'S-Kaminski';
+  status: boolean;
 
   constructor(){
     console.log('[TEST]Constructor into log');
   }
   displayAuthor(){
     return this.author;
+  }
+  getUserStatus(){
+    this.status = true;
   }
 }
