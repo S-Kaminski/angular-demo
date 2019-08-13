@@ -29,5 +29,8 @@
 <div (mouseover)="mouseOverBox()" class="box1"></div>
 <input (keydown)="keyDown()" type="text"/>
 <br><br><br>
-<input [(ngModel)]="inputText" type="text"/> {{ inputText ? inputText : '' }}
+<input [(ngModel)]="inputText" type="text"> {{ inputText ? inputText : '' }}
+<br><br>
+<h1 *ngIf="status; else notTrue">{{ name }}</h1>>
+<ng-template #notTrue> <p>Not true</p> </ng-template>
 <!--{{ getUserStatus() }}-->

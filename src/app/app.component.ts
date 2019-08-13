@@ -9,6 +9,7 @@ export class AppComponent {
   title = 'angular-demo';
   name = 'fellow GitHub code-peeker';
   author = 'S-Kaminski';
+  inputText: string;
   status: boolean;
 
   constructor(){
@@ -19,7 +20,7 @@ export class AppComponent {
     return this.author;
   }
   getUserStatus(){
-    this.status = true;
+    this.status = false;
   }
   buttonClicked(){
     alert('Welcome' + name);
