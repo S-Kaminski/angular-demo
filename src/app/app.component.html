@@ -28,5 +28,6 @@
 <button (click)="buttonClicked()">Click me</button><br>
 <div (mouseover)="mouseOverBox()" class="box1"></div>
 <input (keydown)="keyDown()" type="text"/>
-
+<br><br><br>
+<input [(ngModel)]="inputText" type="text"/> {{ inputText ? inputText : '' }}
 <!--{{ getUserStatus() }}-->
