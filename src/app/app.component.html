@@ -26,7 +26,7 @@
 <label for="status">Active</label>
 <input type="radio" id="status" [checked]="status"><br>
 <button (click)="buttonClicked()">Click me</button><br>
-<div (mouseover)="mouseOverBox()" class="box1">
+<div (mouseover)="mouseOverBox()" class="box1"></div>
+<input (keydown)="keyDown()" type="text"/>
 
-</div>
 <!--{{ getUserStatus() }}-->

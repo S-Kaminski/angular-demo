@@ -27,4 +27,7 @@ export class AppComponent {
   mouseOverBox(){
     console.log('Mouse is over the black box!');
   }
+  keyDown(){
+    console.log('Key down!');
+  }
 }
