@@ -34,6 +34,6 @@
 <h1 *ngIf="status; else notTrue">{{ name }}</h1>>
 <ng-template #notTrue> <p>Not true</p> </ng-template>
 <ul>
-  <li *ngFor="let post of posts">{{ post.title }}</li>
+  <li *ngFor="let post of posts; let i = index">{{ i+1 }} {{ post.title }}</li>
 </ul>
 <!--{{ getUserStatus() }}-->
