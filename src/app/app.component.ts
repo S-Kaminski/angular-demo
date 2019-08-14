@@ -11,10 +11,18 @@ export class AppComponent {
   author = 'S-Kaminski';
   inputText: string;
   status: boolean;
+  posts: object[];
 
   constructor(){
     console.log('[TEST]Constructor into log');
     this.getUserStatus();
+    this.posts = [
+      { title: 'Post1' },
+      { title: 'Post2' },
+      { title: 'Post3' },
+      { title: 'Post4' },
+      { title: 'Post5' }
+    ];
   }
   displayAuthor(){
     return this.author;
