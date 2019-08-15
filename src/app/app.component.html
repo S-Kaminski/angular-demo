@@ -24,7 +24,7 @@
 <hr> 
 <app-example></app-example> -->
 <label for="status">Active</label>
-<input type="radio" id="status" [checked]="status"><br>
+<input type="checkbox" id="status"  [(ngModel)]="status" [checked]="status"><br>
 <button (click)="buttonClicked()">Click me</button><br>
 <div (mouseover)="mouseOverBox()" class="box1"></div>
 <input (keydown)="keyDown()" type="text"/>
@@ -36,4 +36,5 @@
 <ul>
   <li *ngFor="let post of posts; let i = index">{{ i+1 }} {{ post.title }}</li>
 </ul>
+<h1 [ngStyle]="{ color: status ? 'green' : 'red' }"> {{ name }} {{ status }} </h1>
 <!--{{ getUserStatus() }}-->

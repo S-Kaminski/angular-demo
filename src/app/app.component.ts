@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-demo';
-  name = 'fellow GitHub code-peeker';
+  name = 'Welcome fellow GitHub code-peeker';
   author = 'S-Kaminski';
   inputText: string;
   status: boolean;
@@ -28,7 +28,7 @@ export class AppComponent {
     return this.author;
   }
   getUserStatus(){
-    this.status = false;
+    this.status = true;
   }
   buttonClicked(){
     alert('Welcome' + name);
