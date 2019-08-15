@@ -39,18 +39,16 @@
 <h1 [ngStyle]="{ color: status ? 'green' : 'red' }"> {{ name }} {{ status }} </h1>
 <h1 [ngClass]="{isActive: status}">ngClass</h1>
 
-<form>
-<div class="form-grou">
-  <label for="username">Username</label>
-  <input class="form-control" id="username" type="text" placeholder="Enter username:">
-</div>
-<div class="form-group">
-    <label for="password">Password</label>
-  <input class="form-control" id="password" type="password" placeholder="Enter password">
-</div>
-
-<button type="submit" class="btn btn-primary">Submit</button>
-
+<form (ngSubmit)="onSubmit()">
+  <div class="form-grou">
+    <label for="username">Username</label>
+    <input class="form-control" id="username" type="text" placeholder="Enter username:">
+  </div>
+  <div class="form-group">
+      <label for="password">Password</label>
+    <input class="form-control" id="password" type="password" placeholder="Enter password">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 
 <!--{{ getUserStatus() }}-->

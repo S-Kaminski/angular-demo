@@ -39,4 +39,7 @@ export class AppComponent {
   keyDown(){
     console.log('Key down!');
   }
+onSubmit(){
+  alert('Submitted');
+}
 }
