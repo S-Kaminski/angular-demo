@@ -8,3 +8,6 @@ h1 {
     background: #000;
     cursor: pointer;
 }
+.isActive{
+    color: purple;
+}
