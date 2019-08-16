@@ -23,32 +23,54 @@
 <h2>Author: {{ displayAuthor() }}</h2>
 <hr> 
 <app-example></app-example> -->
-<label for="status">Active</label>
-<input type="checkbox" id="status"  [(ngModel)]="status" [checked]="status"><br>
-<button class="btn btn-primary" (click)="buttonClicked()">Click me</button><br>
-<div (mouseover)="mouseOverBox()" class="box1"></div>
-<input (keydown)="keyDown()" type="text"/>
-<br><br><br>
-<input [(ngModel)]="inputText" type="text"> {{ inputText ? inputText : '' }}
-<br><br>
-<h1 *ngIf="status; else notTrue">{{ name }}</h1>>
-<ng-template #notTrue> <p>Not true</p> </ng-template>
-<ul>
-  <li *ngFor="let post of posts; let i = index">{{ i+1 }} {{ post.title }}</li>
-</ul>
-<h1 [ngStyle]="{ color: status ? 'green' : 'red' }"> {{ name }} {{ status }} </h1>
-<h1 [ngClass]="{isActive: status}">ngClass</h1>
 
-<form (ngSubmit)="onSubmit(form1)" #form1="ngForm">
-  <div class="form-grou">
-    <label for="username">Username</label>
-    <input ngModel name="username" class="form-control" id="username" type="text" placeholder="Enter username:">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Contact Page</a>
+      </li>
+    </ul>
   </div>
-  <div class="form-group">
-    <label for="password">Password</label>
-    <input ngModel name="password" class="form-control" id="password" type="password" placeholder="Enter password">
-  </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
+</nav>
+
+
+<div class="container">
+  <label for="status">Active</label>
+  <input type="checkbox" id="status"  [(ngModel)]="status" [checked]="status"><br>
+  <button class="btn btn-primary" (click)="buttonClicked()">Click me</button><br>
+  <div (mouseover)="mouseOverBox()" class="box1"></div>
+  <input (keydown)="keyDown()" type="text"/>
+  <br><br><br>
+  <input [(ngModel)]="inputText" type="text"> {{ inputText ? inputText : '' }}
+  <br><br>
+  <h1 *ngIf="status; else notTrue">{{ name }}</h1>>
+  <ng-template #notTrue> <p>Not true</p> </ng-template>
+  <ul>
+    <li *ngFor="let post of posts; let i = index">{{ i+1 }} {{ post.title }}</li>
+  </ul>
+  <h1 [ngStyle]="{ color: status ? 'green' : 'red' }"> {{ name }} {{ status }} </h1>
+  <h1 [ngClass]="{isActive: status}">ngClass</h1>
+
+  <form (ngSubmit)="onSubmit(form1)" #form1="ngForm">
+    <div class="form-grou">
+      <label for="username">Username</label>
+      <input ngModel name="username" class="form-control" id="username" type="text" placeholder="Enter username:">
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input ngModel name="password" class="form-control" id="password" type="password" placeholder="Enter password">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
 
 <!--{{ getUserStatus() }}-->
