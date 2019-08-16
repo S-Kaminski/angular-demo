@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -12,6 +13,10 @@ export class AppComponent {
   inputText: string;
   status: boolean;
   posts: object[];
+  user = {
+    username: '',
+    password: ''
+  };
 
   constructor(){
     console.log('[TEST]Constructor into log');
@@ -39,7 +44,12 @@ export class AppComponent {
   keyDown(){
     console.log('Key down!');
   }
-onSubmit(){
-  alert('Submitted');
-}
+  onSubmit(form1: NgForm){
+    alert('Submitted');
+    this.user.username = form1.value.username;
+    this.user.password = form1.value.password
+    console.log('Username: ' + this.user.username);
+    console.log('Password: ' + this. user.password);
+    console.log(this.user);
+  }
 }
