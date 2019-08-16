@@ -41,36 +41,5 @@
     </ul>
   </div>
 </nav>
-
-
-<div class="container">
-  <label for="status">Active</label>
-  <input type="checkbox" id="status"  [(ngModel)]="status" [checked]="status"><br>
-  <button class="btn btn-primary" (click)="buttonClicked()">Click me</button><br>
-  <div (mouseover)="mouseOverBox()" class="box1"></div>
-  <input (keydown)="keyDown()" type="text"/>
-  <br><br><br>
-  <input [(ngModel)]="inputText" type="text"> {{ inputText ? inputText : '' }}
-  <br><br>
-  <h1 *ngIf="status; else notTrue">{{ name }}</h1>>
-  <ng-template #notTrue> <p>Not true</p> </ng-template>
-  <ul>
-    <li *ngFor="let post of posts; let i = index">{{ i+1 }} {{ post.title }}</li>
-  </ul>
-  <h1 [ngStyle]="{ color: status ? 'green' : 'red' }"> {{ name }} {{ status }} </h1>
-  <h1 [ngClass]="{isActive: status}">ngClass</h1>
-
-  <form (ngSubmit)="onSubmit(form1)" #form1="ngForm">
-    <div class="form-grou">
-      <label for="username">Username</label>
-      <input ngModel name="username" class="form-control" id="username" type="text" placeholder="Enter username:">
-    </div>
-    <div class="form-group">
-      <label for="password">Password</label>
-      <input ngModel name="password" class="form-control" id="password" type="password" placeholder="Enter password">
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-  </form>
-</div>
-
+ <router-outlet></router-outlet>
 <!--{{ getUserStatus() }}-->
