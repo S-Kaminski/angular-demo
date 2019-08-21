@@ -1,19 +1,33 @@
 <br><div>json data from: https://jsonplaceholder.typicode.com/posts</div><br>
-<div>
-    <table class="table">
-        <thead>
-        <tr>
-            <th scope="col">User ID</th>
-            <th scope="col">Id</th>
-            <th scope="col">Title</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr *ngFor="let post of posts">
-            <th>{{ post.userId }}</th>
-            <td>{{ post.id }}</td>
-            <td>{{ post.title }}</td>
-        </tr>
-        </tbody>
-    </table>
+
+
+<div class="card" *ngFor="let post of posts" style="width: 18rem;">
+    <div class="card-body">
+        <h5 class="card-title">Title: {{ post.title }} </h5>
+        <p class="card-text">Body: {{ post.body }}</p>
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">id: {{ post.id }}</li>
+        <li class="list-group-item">userId: {{ post.userId }}</li>
+    </ul>
+    <br>
 </div>
+
+<div>
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">User ID</th>
+                <th scope="col">Id</th>
+                <th scope="col">Title</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let post of posts">
+                <th>{{ post.userId }}</th>
+                <td>{{ post.id }}</td>
+                <td>{{ post.title }}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>

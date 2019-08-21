@@ -9,13 +9,14 @@ import { HttpClient } from '@angular/common/http'
 export class ContactComponent implements OnInit {
 
   posts: object;
+  test: number;
 
   constructor(private http: HttpClient) { } 
 
   ngOnInit() {
     this.http.get('https://jsonplaceholder.typicode.com/posts').subscribe(posts => {
       this.posts = posts;
-    });
+    }); 
   }
 
 }
