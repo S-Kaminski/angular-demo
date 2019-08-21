@@ -1,1 +1,19 @@
-<p>contact works!</p>
+<br><div>json data from: https://jsonplaceholder.typicode.com/posts</div><br>
+<div>
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">User ID</th>
+            <th scope="col">Id</th>
+            <th scope="col">Title</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let post of posts">
+            <th>{{ post.userId }}</th>
+            <td>{{ post.id }}</td>
+            <td>{{ post.title }}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
