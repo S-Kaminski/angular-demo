@@ -26,4 +26,15 @@
       </div>
       <button type="submit" class="btn btn-primary">Submit</button>
     </form>
+<div>
+  <form (ngSubmit)="onSubmit2(form2)" #form2="ngForm">
+    <div class="form-group">
+      <label for="title">Title:</label>
+      <input ngModel name="title" type="text" id="title" class="form-control" placeholder="Enter title">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit form2</button>
+  </form>
+</div>
+
+
   </div>
